@@ -3,7 +3,7 @@ By anaylzing online advertisement click data, this project aims to forecast if a
 The dataset consists of time-series of large size categorical features. However, this repository does not contain the data. I mainly descrbie how to implement categorical embedding by Tensorflow, as well as PCA to describe feature importance.
 
 Repository contents:
-- Task_description.pdf: General explaination in this project
+- Task_description.pdf: General explaination in this project as a presentation format.
 - prediction_result.csv: Prediction result with ID column and probability to be labeled as one.
 
 
