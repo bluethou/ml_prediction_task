@@ -3,7 +3,7 @@ from pyspark.ml.feature import OneHotEncoder
 from pyspark.sql.types import IntegerType
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
-# from pyspark.ml.feature import StringIndexer
+from pyspark.ml.feature import VectorAssembler
 
 df1 = spark.read.options(header='True').csv("train.csv")
 df2 = spark.read.options(header='True').csv("validation.csv")
@@ -24,7 +24,6 @@ def data_transform(df):
 	encoded = model.transform(df)
 	encoded = encoded.drop(*colnames)
 
-	from pyspark.ml.feature import VectorAssembler
 	assembler = VectorAssembler( inputCols=encoded.columns, outputCol='features')
 	transform_encoded = assembler.transform(encoded)
 	return transform_encoded
