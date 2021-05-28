@@ -13,3 +13,5 @@ Repository contents:
 - feature_importance.xlsx: feature importance tables written in Excel. Explaination included.
 - pyspark_script.py: script to train logistic regression with Spark on GCP dataproc
 - pca_modeling.ipynb: modeling with PCA features
+
+* 본 프로젝트는 Google의 GCP Credit 지원을 받고 있습니다.
